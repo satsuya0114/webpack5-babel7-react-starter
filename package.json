@@ -1,0 +1,8 @@
+{
+  "name": "basic-webpack-react",
+  "version": "1.0.0",
+  "description": "a basic webpack 5 combine react 17 starter kit",
+  "main": "index.js",
+  "author": "satsuya0114",
+  "license": "MIT"
+}
