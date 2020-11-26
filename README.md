@@ -5,3 +5,7 @@ use
 babel after `7.4.0` => `7.12.9`
 
 webpack `5.6.0`
+
+react react-dom `17.0.1`
+
+and use `react-refresh`
