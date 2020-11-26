@@ -6,7 +6,8 @@ const path = require('path');
 const toml = require('toml');
 const yaml = require('yamljs');
 const json5 = require('json5');
-const isProductionMode = process.env.NODE_ENV === "production";
+const isProductionMode = process.env.NODE_ENV === 'production';
+const isDevelopment = process.env.NODE_ENV !== 'production';
  
 
 module.exports = {
@@ -21,18 +22,20 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.[jt]sx?$/,
         // 排除 node_modules 與 bower_components 底下資料 (第二步)
         exclude: /(node_modules|bower_components)/,
         use: {
-          loader: 'babel-loader',
+          loader: require.resolve('babel-loader'),
           options: {
             plugins: [
               ['module-resolver', {
                 root: ['./src'],
                 alias: {},
-              }]
-            ],
+              }],
+              isDevelopment && require.resolve('react-refresh/babel'),
+              // https://github.com/pmmmwh/react-refresh-webpack-plugin
+            ].filter(Boolean),
           },
         },
       },
@@ -137,7 +140,7 @@ module.exports = {
       chunkFilename: isProductionMode ? '[id].[contenthash].css' : '[id].[hash].css',
     }),
     new HtmlWebpackPlugin({
-      title: 'Caching',  
+      template: path.resolve(__dirname, 'src/index.html'),
     }),
     new BundleAnalyzerPlugin(),
     new WebpackBar(),
