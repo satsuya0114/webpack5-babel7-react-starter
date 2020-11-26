@@ -1,0 +1,26 @@
+{
+  "presets": [
+    ["@babel/preset-env", {
+      "targets": "defaults"
+      // https://github.com/browserslist/browserslist#queries
+      // https://babeljs.io/docs/en/babel-preset-env#docsNav
+    }],
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-transform-runtime",
+      // @babel/runtime + @babel/plugin-transform-runtime || core-js + regenerator-runtime/runtime
+      // https://github.com/babel/babel/issues/10271#issuecomment-528379505
+      {
+        "corejs": 3 // --dev @babel/runtime-corejs3
+      }
+    ],
+    "@babel/plugin-syntax-dynamic-import",
+    // If you are including your plugins manually and using @babel/plugin-proposal-class-properties, make sure that @babel/plugin-proposal-decorators comes before @babel/plugin-proposal-class-properties.
+    // refern: https://babeljs.io/docs/en/babel-plugin-proposal-decorators.html
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-object-rest-spread",
+    "react-hot-loader/babel"
+  ]
+}
