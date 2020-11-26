@@ -1,4 +1,4 @@
-# basic-webpack-react
+# webpack5-babel7-react-starter
 
 use
 
