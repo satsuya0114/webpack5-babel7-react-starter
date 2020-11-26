@@ -1,8 +1,8 @@
 {
-  "name": "basic-webpack-react",
+  "name": "webpack5-babel7-react-starter",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:satsuya0114/basic-webpack-react.git",
+  "repository": "git@github.com:satsuya0114/webpack5-babel7-react-starter.git",
   "author": "Nei Nei <satsuya0114@gmail.com>",
   "license": "MIT",
   "scripts": {
