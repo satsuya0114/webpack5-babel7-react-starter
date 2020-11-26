@@ -1,4 +1,4 @@
-# webpack5-babel7-react-starter
+# webpack5-babel7-react17-starter
 
 use
 
