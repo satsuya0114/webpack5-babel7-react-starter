@@ -14,7 +14,7 @@ module.exports = {
     app: './src/index.js',
   },
   output: {
-    filename: '[name].[hash].js',
+    filename: isProductionMode ? '[name].[contenthash].js' : '[name].[hash].js',
     path: path.resolve(__dirname, 'dist'),
     assetModuleFilename: 'asstes/[hash][ext][query]',
   },
@@ -133,8 +133,8 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: isProductionMode ? '[name].[hash].css' : '[name].css',
-      chunkFilename: isProductionMode ? '[id].[hash].css' : '[id].css',
+      filename: isProductionMode ? '[name].[contenthash].css' : '[name].[hash].css',
+      chunkFilename: isProductionMode ? '[id].[contenthash].css' : '[id].[hash].css',
     }),
     new HtmlWebpackPlugin({
       title: 'Caching',  

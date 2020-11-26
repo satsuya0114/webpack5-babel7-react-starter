@@ -1,7 +1,5 @@
 import _ from 'lodash';
 import './style.less';
-import Icon from './icon.png';
-import Svg from './worldwide.svg';
 import txt from './hello.txt';
 import printMe from './print';
 
