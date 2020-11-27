@@ -1,0 +1,38 @@
+@background-color: #c6535b;
+@word-color: #ffffff;
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: @background-color;
+  color: @word-color;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.button {
+  min-width: 7em;
+  margin-top: 3em;
+  margin-right: 0.5em;
+  padding: 0.5em 2em;
+  outline: none;
+  border: 2px solid #fff;
+  background-color: transparent;
+  border-radius: 8em;
+  color: rgba(255, 255, 255, 0.735);
+  cursor: pointer;
+  transition-duration: 0.2s;
+  font-size: 0.75em;
+  font-weight: 600;
+  &:hover {
+    color: #fff;
+  }
+  &:active {
+    background-color:rgba(255, 255, 255, 0.3);;
+    border: 2px solidrgba(255, 255, 255, 0.3);;
+    color: white;
+  }
+}

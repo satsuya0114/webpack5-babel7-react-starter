@@ -1,9 +1,12 @@
 import React from 'react';
+import './style.less';
 
 const Home = () => (
-  <>
-    Hello, React 17.0.1
-  </>
+  <div className="container">
+    <div>
+      Hello, React 17.0.1
+    </div>
+  </div>
 );
 
 export default Home;
