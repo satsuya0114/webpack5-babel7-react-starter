@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",
+    "baseUrl": "./",
+    "paths": {
+      "~/*": ["src/*"],
+      "~modules/*": ["src/modules/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}

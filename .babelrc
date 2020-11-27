@@ -24,6 +24,19 @@
     // refern: https://babeljs.io/docs/en/babel-plugin-proposal-decorators.html
     "@babel/plugin-proposal-class-properties",
     "@babel/plugin-proposal-object-rest-spread",
-    "react-hot-loader/babel"
+    "react-hot-loader/babel",
+    ["module-resolver", {
+      "root": ["./src"],
+      "extensions": [
+        "js",
+        "jsx",
+        "ts",
+        "tsx"
+      ],
+      "alias": {
+        "~": "./src",
+        "~modules": "./src/modules"
+      }
+    }]
   ]
 }

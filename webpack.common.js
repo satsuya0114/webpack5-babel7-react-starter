@@ -1,14 +1,15 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const WebpackBar = require('webpackbar');
 const path = require('path');
 const toml = require('toml');
 const yaml = require('yamljs');
 const json5 = require('json5');
+const sass = require('sass');
+
 const isProductionMode = process.env.NODE_ENV === 'production';
 const isDevelopment = process.env.NODE_ENV !== 'production';
- 
 
 module.exports = {
   entry: {
@@ -31,7 +32,11 @@ module.exports = {
             plugins: [
               ['module-resolver', {
                 root: ['./src'],
-                alias: {},
+                alias: {
+                  '~': path.resolve(__dirname, './src'),
+                  '~modules': path.resolve(__dirname, './src', 'modules'),
+                },
+                extensions: ['.js', '.jsx', '.ts', '.tsx'],
               }],
               isDevelopment && require.resolve('react-refresh/babel'),
               // https://github.com/pmmmwh/react-refresh-webpack-plugin
@@ -53,13 +58,13 @@ module.exports = {
             loader: MiniCssExtractPlugin.loader,
             options: {
               publicPath: '',
-            }
+            },
           } : 'style-loader',
           'css-loader',
           {
             loader: 'sass-loader',
             options: {
-              implementation: require('sass'),
+              implementation: sass,
             },
           },
           'postcss-loader',
@@ -72,13 +77,14 @@ module.exports = {
             loader: MiniCssExtractPlugin.loader,
             options: {
               publicPath: '',
-            }
-          } : 'style-loader',// This plugin should be used only on production builds without style-loader in the loaders chain, especially if you want to have HMR in development.
-          // Here is an example to have both HMR in development and your styles extracted in a file for production builds.
+            },
+          } : 'style-loader', // This plugin should be used only on production builds without style-loader in the loaders chain, especially if you want to have HMR in development.
+          // Here is an example to have both HMR in development and your styles
+          // extracted in a file for production builds.
           'css-loader',
           'less-loader',
           'postcss-loader',
-        ]
+        ],
       },
       {
         test: /\.(png|jpg|jpeg|gif)$/i,
@@ -90,26 +96,26 @@ module.exports = {
         generator: {
           filename: 'icons/[hash][ext]',
         },
-        use: 'svgo-loader'
+        use: 'svgo-loader',
       },
       {
         test: /\.txt/,
         type: 'asset', // inline or resource
         parser: {
           dataUrlCondition: {
-            maxSize: 4 * 1024 // 4kb inline
+            maxSize: 4 * 1024, // 4kb inline
           },
         },
         generator: { // resource
-          filename: 'txt/[hash][ext]'
-        }
+          filename: 'txt/[hash][ext]',
+        },
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
         generator: { // resource
-          filename: 'fonts/[hash][ext]'
-        }
+          filename: 'fonts/[hash][ext]',
+        },
       },
       {
         test: /\.toml$/i,
@@ -160,8 +166,8 @@ module.exports = {
           test: /\.css$/,
           name: 'styles',
           chunks: 'all',
-          enforce: true
-        }
+          enforce: true,
+        },
       },
     },
   },
