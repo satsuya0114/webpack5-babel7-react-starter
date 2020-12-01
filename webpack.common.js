@@ -16,7 +16,7 @@ module.exports = {
     app: './src/index.js',
   },
   output: {
-    filename: isProductionMode ? '[name].[contenthash].js' : '[name].[hash].js',
+    filename: isProductionMode ? 'js/[name].[contenthash].js' : '[name].[hash].js',
     path: path.resolve(__dirname, 'dist'),
     assetModuleFilename: 'asstes/[hash][ext][query]',
   },
@@ -142,7 +142,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: isProductionMode ? '[name].[contenthash].css' : '[name].[hash].css',
+      filename: isProductionMode ? 'css/[name].[contenthash].css' : '[name].[hash].css',
       chunkFilename: isProductionMode ? '[id].[contenthash].css' : '[id].[hash].css',
     }),
     new HtmlWebpackPlugin({
@@ -152,14 +152,19 @@ module.exports = {
     new WebpackBar(),
   ],
   optimization: {
-    moduleIds: 'deterministic',
+    moduleIds: 'natural',
     splitChunks: {
       chunks: 'all',
       // use in big node_modules to caching file
       cacheGroups: {
-        vendor: {
+        commons: {
           test: /[\\/]node_modules[\\/]/,
           name: 'vendors',
+          chunks: 'all',
+        },
+        vendor: {
+          test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
+          name: 'vendor',
           chunks: 'all',
         },
         styles: {
