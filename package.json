@@ -11,7 +11,8 @@
     "start": "webpack serve --hot --config webpack.dev.js",
     "build": "NODE_ENV=production webpack --env production --config webpack.prod.js",
     "webpackstats": "webpack --profile --json > compilation-stats.json",
-    "server": "node server.js"
+    "server": "node server.js",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "core-js": "^3.8.0",
