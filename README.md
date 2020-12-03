@@ -10,4 +10,12 @@ react react-dom `17.0.1`
 
 and use `react-refresh` to replace `react-hot-loader`
 
+`npm run localstart` to start at http://localhost:8080
+
+`npm run build` to run webpack production mode and the distination file: ./dist
+
+`npm start` use express to run http://localhost:3000 (before run `npm start` you should run `npm run build`)
+
 ![alt text](https://github.com/satsuya0114/webpack5-babel7-react-starter/blob/main/readme.png)
+
+[live demo](https://webpack5-babel7-react-starter.herokuapp.com/)
