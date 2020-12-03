@@ -8,10 +8,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch",
-    "start": "webpack serve --hot --config webpack.dev.js",
+    "localstart": "webpack serve --hot --config webpack.dev.js",
     "build": "NODE_ENV=production webpack --env production --config webpack.prod.js",
     "webpackstats": "webpack --profile --json > compilation-stats.json",
-    "server": "node server.js",
+    "start": "node server.js",
     "heroku-postbuild": "npm run build"
   },
   "dependencies": {
