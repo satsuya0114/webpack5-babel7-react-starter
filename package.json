@@ -10,7 +10,7 @@
     "watch": "webpack --watch",
     "start": "webpack serve --hot --config webpack.dev.js",
     "build": "NODE_ENV=production webpack --env production --config webpack.prod.js",
-    "genstats": "webpack --mode production --profile --json > stats.json"
+    "webpackstats": "webpack --profile --json > compilation-stats.json"
   },
   "dependencies": {
     "core-js": "^3.8.0",

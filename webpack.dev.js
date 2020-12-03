@@ -31,6 +31,6 @@ module.exports = merge(common, {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     // https://github.com/pmmmwh/react-refresh-webpack-plugin
-    new ReactRefreshWebpackPlugin()
+    new ReactRefreshWebpackPlugin(),
   ],
 });

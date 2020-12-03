@@ -24,7 +24,8 @@ module.exports = {
     rules: [
       {
         test: /\.[jt]sx?$/,
-        // 排除 node_modules 與 bower_components 底下資料 (第二步)
+        // test: /\.m?js$/,
+        // test: /\.(js|jsx)$/,
         exclude: /(node_modules|bower_components)/,
         use: {
           loader: require.resolve('babel-loader'),

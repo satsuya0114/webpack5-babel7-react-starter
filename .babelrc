@@ -15,8 +15,9 @@
       "@babel/plugin-transform-runtime",
       // @babel/runtime + @babel/plugin-transform-runtime || core-js + regenerator-runtime/runtime
       // https://github.com/babel/babel/issues/10271#issuecomment-528379505
+      // https://awdr74100.github.io/2020-03-16-webpack-babelloader/
       {
-        "corejs": 3 // --dev @babel/runtime-corejs3
+        "corejs": 3 // yarn add --dev @babel/runtime-corejs3
       }
     ],
     "@babel/plugin-syntax-dynamic-import",
