@@ -62,13 +62,13 @@ module.exports = {
             },
           } : 'style-loader',
           'css-loader',
+          'postcss-loader',
           {
             loader: 'sass-loader',
             options: {
               implementation: sass,
             },
           },
-          'postcss-loader',
         ],
       },
       {
@@ -83,8 +83,8 @@ module.exports = {
           // Here is an example to have both HMR in development and your styles
           // extracted in a file for production builds.
           'css-loader',
-          'less-loader',
           'postcss-loader',
+          'less-loader',
         ],
       },
       {
