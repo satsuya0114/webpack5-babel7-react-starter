@@ -10,10 +10,12 @@
     "watch": "webpack --watch",
     "start": "webpack serve --hot --config webpack.dev.js",
     "build": "NODE_ENV=production webpack --env production --config webpack.prod.js",
-    "webpackstats": "webpack --profile --json > compilation-stats.json"
+    "webpackstats": "webpack --profile --json > compilation-stats.json",
+    "server": "node server.js"
   },
   "dependencies": {
     "core-js": "^3.8.0",
+    "express": "^4.17.1",
     "history": "4.10.1",
     "lodash": "^4.17.20",
     "normalize.css": "^8.0.1",
