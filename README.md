@@ -24,17 +24,20 @@ recommend to use nvm lts version to install node
 
 before run the project use `yarn` or `npm` to install `node_modules`
 
-`yarn install` - recommended
+```
+# recommended
+yarn install
 
-`npm install`
-
+# or
+npm install
+```
 ---
 
-`npm run localstart` to start at http://localhost:8080 with webpack development mode (use `react-refresh-webpack-plugin`)
+* `npm run localstart` to start at http://localhost:8080 with webpack development mode (use `react-refresh-webpack-plugin`)
 
-`npm run build` to run webpack production mode and the distination file: ./dist
+* `npm run build` to run webpack production mode and the distination file: ./dist
 
-`npm start` use express to run http://localhost:3000 (before run `npm start` you should run `npm run build`)
+* `npm start` use express to run http://localhost:3000 (before run `npm start` you should run `npm run build`)
 
 ![alt text](https://github.com/satsuya0114/webpack5-babel7-react-starter/blob/main/readme.png)
 
