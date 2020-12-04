@@ -21,6 +21,5 @@ module.exports = {
     'import/extensions': [0],
     'object-curly-newline': 0,
     'react/jsx-props-no-spreading': [0],
-    'arrow-parens': ['error', 'as-needed'],
   },
 };
