@@ -1,5 +1,6 @@
 // 0: off, 1: warn, 2: error
 module.exports = {
+  root: true,
   parser: '@babel/eslint-parser',
   extends: ['airbnb', 'airbnb/hooks'],
   env: {
@@ -21,5 +22,6 @@ module.exports = {
     'import/extensions': [0],
     'object-curly-newline': 0,
     'react/jsx-props-no-spreading': [0],
+    'react-hooks/exhaustive-deps': 'warn',
   },
 };
