@@ -8,11 +8,9 @@ import Routes from './routes';
 const history = createBrowserHistory();
 
 const App = () => (
-  <>
-    <Router history={history}>
-      <Routes />
-    </Router>
-  </>
+  <Router history={history}>
+    <Routes />
+  </Router>
 );
 
 ReactDOM.render(<App />, document.getElementById('app'));

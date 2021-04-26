@@ -1,0 +1,273 @@
+{
+  "hash": "2549a1a69b38887a1de1",
+  "version": "5.6.0",
+  "time": 138,
+  "builtAt": 1606964065343,
+  "publicPath": "auto",
+  "outputPath": "/Users/neinei/project/webpack5-babel7-react-starter/dist",
+  "assetsByChunkName": {
+    "main": [
+      "main.js"
+    ]
+  },
+  "assets": [
+    {
+      "type": "asset",
+      "name": "main.js",
+      "size": 330,
+      "chunkNames": [
+        "main"
+      ],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "javascriptModule": false,
+        "minimized": true
+      },
+      "related": {},
+      "chunks": [
+        179
+      ],
+      "auxiliaryChunks": [],
+      "isOverSizeLimit": false
+    }
+  ],
+  "chunks": [
+    {
+      "rendered": true,
+      "initial": true,
+      "entry": true,
+      "recorded": false,
+      "size": 387,
+      "sizes": {
+        "javascript": 387
+      },
+      "names": [
+        "main"
+      ],
+      "idHints": [],
+      "runtime": [
+        "main"
+      ],
+      "files": [
+        "main.js"
+      ],
+      "auxiliaryFiles": [],
+      "hash": "67df8800d8faca3d69b3",
+      "childrenByOrder": {},
+      "id": 179,
+      "siblings": [],
+      "parents": [],
+      "children": [],
+      "modules": [
+        {
+          "type": "module",
+          "moduleType": "javascript/auto",
+          "identifier": "/Users/neinei/project/webpack5-babel7-react-starter/src/index.js",
+          "name": "./src/index.js",
+          "nameForCondition": "/Users/neinei/project/webpack5-babel7-react-starter/src/index.js",
+          "index": 0,
+          "preOrderIndex": 0,
+          "index2": 0,
+          "postOrderIndex": 0,
+          "size": 387,
+          "sizes": {
+            "javascript": 387
+          },
+          "cacheable": true,
+          "built": true,
+          "codeGenerated": true,
+          "cached": false,
+          "optional": false,
+          "orphan": false,
+          "dependent": false,
+          "issuer": null,
+          "issuerName": null,
+          "issuerPath": null,
+          "failed": true,
+          "errors": 1,
+          "warnings": 0,
+          "profile": {
+            "total": 23,
+            "resolving": 16,
+            "restoring": 0,
+            "building": 7,
+            "integration": 0,
+            "storing": 0,
+            "additionalResolving": 0,
+            "additionalIntegration": 0,
+            "factory": 16,
+            "dependencies": 0
+          },
+          "id": 138,
+          "issuerId": null,
+          "chunks": [
+            179
+          ],
+          "assets": [],
+          "reasons": [
+            {
+              "moduleIdentifier": null,
+              "module": null,
+              "moduleName": null,
+              "resolvedModuleIdentifier": null,
+              "resolvedModule": null,
+              "type": "entry",
+              "active": true,
+              "explanation": "",
+              "userRequest": "./src",
+              "loc": "main",
+              "moduleId": null,
+              "resolvedModuleId": null
+            }
+          ],
+          "usedExports": [],
+          "providedExports": null,
+          "optimizationBailout": [
+            "ModuleConcatenation bailout: Module is not an ECMAScript module"
+          ],
+          "depth": 0
+        }
+      ],
+      "origins": [
+        {
+          "module": "",
+          "moduleIdentifier": "",
+          "moduleName": "",
+          "loc": "main",
+          "request": "./src"
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "type": "module",
+      "moduleType": "javascript/auto",
+      "identifier": "/Users/neinei/project/webpack5-babel7-react-starter/src/index.js",
+      "name": "./src/index.js",
+      "nameForCondition": "/Users/neinei/project/webpack5-babel7-react-starter/src/index.js",
+      "index": 0,
+      "preOrderIndex": 0,
+      "index2": 0,
+      "postOrderIndex": 0,
+      "size": 387,
+      "sizes": {
+        "javascript": 387
+      },
+      "cacheable": true,
+      "built": true,
+      "codeGenerated": true,
+      "cached": false,
+      "optional": false,
+      "orphan": false,
+      "issuer": null,
+      "issuerName": null,
+      "issuerPath": null,
+      "failed": true,
+      "errors": 1,
+      "warnings": 0,
+      "profile": {
+        "total": 23,
+        "resolving": 16,
+        "restoring": 0,
+        "building": 7,
+        "integration": 0,
+        "storing": 0,
+        "additionalResolving": 0,
+        "additionalIntegration": 0,
+        "factory": 16,
+        "dependencies": 0
+      },
+      "id": 138,
+      "issuerId": null,
+      "chunks": [
+        179
+      ],
+      "assets": [],
+      "reasons": [
+        {
+          "moduleIdentifier": null,
+          "module": null,
+          "moduleName": null,
+          "resolvedModuleIdentifier": null,
+          "resolvedModule": null,
+          "type": "entry",
+          "active": true,
+          "explanation": "",
+          "userRequest": "./src",
+          "loc": "main",
+          "moduleId": null,
+          "resolvedModuleId": null
+        }
+      ],
+      "usedExports": [],
+      "providedExports": null,
+      "optimizationBailout": [
+        "ModuleConcatenation bailout: Module is not an ECMAScript module"
+      ],
+      "depth": 0
+    }
+  ],
+  "entrypoints": {
+    "main": {
+      "name": "main",
+      "chunks": [
+        179
+      ],
+      "assets": [
+        {
+          "name": "main.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "auxiliaryAssets": [],
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 0,
+      "children": {},
+      "childAssets": {},
+      "isOverSizeLimit": false
+    }
+  },
+  "namedChunkGroups": {
+    "main": {
+      "name": "main",
+      "chunks": [
+        179
+      ],
+      "assets": [
+        {
+          "name": "main.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "auxiliaryAssets": [],
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 0,
+      "children": {},
+      "childAssets": {},
+      "isOverSizeLimit": false
+    }
+  },
+  "errors": [
+    {
+      "moduleIdentifier": "/Users/neinei/project/webpack5-babel7-react-starter/src/index.js",
+      "moduleName": "./src/index.js",
+      "loc": "11:2",
+      "message": "Module parse failed: Unexpected token (11:2)\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\n| \n| const App = () => (\n>   <Router history={history}>\n|     <Routes />\n|   </Router>",
+      "moduleId": 138,
+      "moduleTrace": [],
+      "stack": "ModuleParseError: Module parse failed: Unexpected token (11:2)\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\n| \n| const App = () => (\n>   <Router history={history}>\n|     <Routes />\n|   </Router>\n    at handleParseError (/Users/neinei/project/webpack5-babel7-react-starter/node_modules/webpack/lib/NormalModule.js:787:19)\n    at /Users/neinei/project/webpack5-babel7-react-starter/node_modules/webpack/lib/NormalModule.js:850:5\n    at processResult (/Users/neinei/project/webpack5-babel7-react-starter/node_modules/webpack/lib/NormalModule.js:624:11)\n    at /Users/neinei/project/webpack5-babel7-react-starter/node_modules/webpack/lib/NormalModule.js:675:5\n    at /Users/neinei/project/webpack5-babel7-react-starter/node_modules/loader-runner/lib/LoaderRunner.js:404:3\n    at iterateNormalLoaders (/Users/neinei/project/webpack5-babel7-react-starter/node_modules/loader-runner/lib/LoaderRunner.js:233:10)\n    at Array.<anonymous> (/Users/neinei/project/webpack5-babel7-react-starter/node_modules/loader-runner/lib/LoaderRunner.js:224:4)\n    at runCallbacks (/Users/neinei/project/webpack5-babel7-react-starter/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js:25:15)\n    at /Users/neinei/project/webpack5-babel7-react-starter/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js:198:4\n    at /Users/neinei/project/webpack5-babel7-react-starter/node_modules/graceful-fs/graceful-fs.js:123:16"
+    }
+  ],
+  "errorsCount": 1,
+  "warnings": [],
+  "warningsCount": 0,
+  "children": []
+}

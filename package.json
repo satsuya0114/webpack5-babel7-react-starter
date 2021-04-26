@@ -8,12 +8,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch",
-    "start": "webpack serve --hot --config webpack.dev.js",
+    "localstart": "webpack serve --hot --config webpack.dev.js",
     "build": "NODE_ENV=production webpack --env production --config webpack.prod.js",
-    "genstats": "webpack --mode production --profile --json > stats.json"
+    "webpackstats": "webpack --profile --json > compilation-stats.json",
+    "start": "node server.js",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "core-js": "^3.8.0",
+    "express": "^4.17.1",
     "history": "4.10.1",
     "lodash": "^4.17.20",
     "normalize.css": "^8.0.1",

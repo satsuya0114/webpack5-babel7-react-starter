@@ -16,7 +16,7 @@ module.exports = {
     app: './src/index.js',
   },
   output: {
-    filename: isProductionMode ? '[name].[contenthash].js' : '[name].[hash].js',
+    filename: isProductionMode ? 'js/[name].[contenthash].js' : '[name].[hash].js',
     path: path.resolve(__dirname, 'dist'),
     assetModuleFilename: 'asstes/[hash][ext][query]',
   },
@@ -24,7 +24,8 @@ module.exports = {
     rules: [
       {
         test: /\.[jt]sx?$/,
-        // 排除 node_modules 與 bower_components 底下資料 (第二步)
+        // test: /\.m?js$/,
+        // test: /\.(js|jsx)$/,
         exclude: /(node_modules|bower_components)/,
         use: {
           loader: require.resolve('babel-loader'),
@@ -61,13 +62,13 @@ module.exports = {
             },
           } : 'style-loader',
           'css-loader',
+          'postcss-loader',
           {
             loader: 'sass-loader',
             options: {
               implementation: sass,
             },
           },
-          'postcss-loader',
         ],
       },
       {
@@ -82,8 +83,8 @@ module.exports = {
           // Here is an example to have both HMR in development and your styles
           // extracted in a file for production builds.
           'css-loader',
-          'less-loader',
           'postcss-loader',
+          'less-loader',
         ],
       },
       {
@@ -142,7 +143,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: isProductionMode ? '[name].[contenthash].css' : '[name].[hash].css',
+      filename: isProductionMode ? 'css/[name].[contenthash].css' : '[name].[hash].css',
       chunkFilename: isProductionMode ? '[id].[contenthash].css' : '[id].[hash].css',
     }),
     new HtmlWebpackPlugin({
@@ -152,14 +153,19 @@ module.exports = {
     new WebpackBar(),
   ],
   optimization: {
-    moduleIds: 'deterministic',
+    moduleIds: 'natural',
     splitChunks: {
       chunks: 'all',
       // use in big node_modules to caching file
       cacheGroups: {
-        vendor: {
+        commons: {
           test: /[\\/]node_modules[\\/]/,
           name: 'vendors',
+          chunks: 'all',
+        },
+        vendor: {
+          test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
+          name: 'vendor',
           chunks: 'all',
         },
         styles: {
