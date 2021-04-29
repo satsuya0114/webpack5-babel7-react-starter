@@ -14,7 +14,9 @@ const routes = () => (
   <Switch>
     <Route path={PATH.HOME} exact render={Home} />
     <Route path={PATH.ERROR} render={NotFound} />
-    <Redirect from="*" to={PATH.ERROR} />
+    <Route path="*">
+      <Redirect to={PATH.ERROR} />
+    </Route>
   </Switch>
 );
 
